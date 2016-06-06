@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  birthday: 2016-06-05
+  weight: MyString
+  height: MyString
+  blood: MyString
+  constellation: MyString
+  color: MyString
+  gpa: MyString
+
+two:
+  name: MyString
+  birthday: 2016-06-05
+  weight: MyString
+  height: MyString
+  blood: MyString
+  constellation: MyString
+  color: MyString
+  gpa: MyString

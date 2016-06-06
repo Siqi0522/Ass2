@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<div id="header"></div>
+
+<h1 style="font-size:50px;"><center>Students Information</center></h1>
+
+
+<div align="center" style="background-color:#ff9999; width:100%;">
+<p><center><br>
+  <strong>Name:</strong>
+  <%= @student.name %>
+</p></center>
+
+<p><center><br>
+  <strong>Birthday:</strong>
+  <%= @student.birthday %>
+</p></center>
+
+<p><center><br>
+  <strong>Weight:</strong>
+  <%= @student.weight %>
+</p></center>
+
+<p><center><br>
+  <strong>Height:</strong>
+  <%= @student.height %>
+</p></center>
+
+<p><center><br>
+  <strong>Blood:</strong>
+  <%= @student.blood %>
+</p></center>
+
+<p><center><br>
+  <strong>Constellation:</strong>
+  <%= @student.constellation %>
+</p></center>
+
+<p><center><br>
+  <strong>Color:</strong>
+  <%= @student.color %>
+</p></center>
+
+<p><center><br>
+  <strong>Gpa:</strong>
+  <%= @student.gpa %>
+</p></center>
+
+<p><br></p>
+</div>
+
+<center>
+<% @students.each do |student| %>
+<div style="display:inline-block; width:<%= student.weight %>px;height:<%= student.height %>px;border:5px solid #000;border-color:<%= student.color %>"><%= student.name %><br><%= student.birthday %><br><%= student.blood %><br><%= student.constellation %><br><%= student.gpa %></div>
+<% end %>
+</center>
+
+<p><br></p>
+
+<center><%= link_to 'Edit', edit_student_path(@student) %>  |
+<%= link_to 'Back', students_path %></center>

@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<div style="background-color:#A00000;height:5%;"></div>
+
+<h1 style="font-size:50px;"><center>Students List</center></h1>
+
+<p><br></p>
+
+<table align="center" weight="100%" border="1px solid black" width="80%" height="50%">
+  <thead style="background-color:#ff9999;">
+    <tr>
+      <th font-size=20px width=11% height="50px">Name</th>
+      <th width=11%>Birthday</th>
+      <th width=11%>Weight</th>
+      <th width=11%>Height</th>
+      <th width=11%>Blood</th>
+      <th width=11%>Constellation</th>
+      <th width=11%>Color</th>
+      <th width=11%>Gpa</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+        <td style="background-color:#ffcccc;" height="50px"><%= student.name %></td>
+        <td><%= student.birthday %></td>
+        <td><%= student.weight %></td>
+        <td><%= student.height %></td>
+        <td><%= student.blood %></td>
+        <td><%= student.constellation %></td>
+        <td><%= student.color %></td>
+        <td><%= student.gpa %></td>
+        <td><%= link_to 'Show', student %> | <%= link_to 'Edit', edit_student_path(student) %> | <%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<p><br></p>
+
+<center><%= link_to 'New Student', new_student_path %></center>
